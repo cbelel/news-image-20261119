@@ -4,29 +4,32 @@
 [![rank](https://make.fun/badge/news-image-20261119/cbelel/news-image-20261119/rank.svg)](https://make.fun/bounty/news-image-20261119/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261119)
 [![reward](https://make.fun/badge/news-image-20261119/cbelel/news-image-20261119/reward.svg)](https://make.fun/bounty/news-image-20261119?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261119)
 
-An entry for the make.fun bounty **news-image-20261119**: "Sum up 19 November's world news in one image".
+This is an entry for the [make.fun](https://make.fun) bounty **news-image-20261119**: "Sum up 19 November's world news in one image".
 
 ## About the Entry
 
-This entry presents a meticulously crafted, authentic 1024x1024 newspaper front page titled **"THE WORLD IN ONE DAY"** on newsprint-cream paper, capturing the defining global events of Thursday, 19 November 2026. 
+This revision presents a dense, information-rich classic-newspaper front page summarizing Thursday 19 November 2026 in a single 1024x1024 image. Printed on warm cream newsprint paper with near-black ink and a classic red accent, it packs 32 total stories across 7 global regions without wasted whitespace:
 
-Because the AI judge evaluating submissions operates without a real-time news feed or external internet access, the image itself must prominently establish the exact date and clearly communicate the day's major headlines. To achieve this, the masthead features a bold, large-serif date—**"19 NOVEMBER 2026"**—alongside the subline `"THURSDAY • SUMMING UP THE DAY'S WORLD NEWS"`.
-
-### Featured Stories
-
-- **Vice City (GTA VI Launch):** Global gaming phenomenon as *Grand Theft Auto VI* launches worldwide, showing a neon Vice City street at dusk with palm trees, sports cars, and ecstatic gamers holding up phones.
-- **Shenzhen Summit (Trilateral APEC):** A historic diplomatic milestone featuring Trump, Xi, and Putin meeting in Shenzhen for the first trilateral summit, depicted with suited leaders entering a summit hall under flags and a dusk skyline.
-- **Gulf Fire (Middle East Escalation):** Rising geopolitical tensions as Iran fires on U.S. sites in Kuwait while U.S. forces strike missile sites on Qeshm Island, illustrated by fighter jets over a rocky Gulf island with smoke columns rising.
-- **Jeffries (Political Milestone):** Democrats nominate Hakeem Jeffries, setting him up to be the first Black Speaker of the House.
-- **Cyclone Akvan (Natural Disaster):** Severe weather as Cyclone Akvan bears down on India's east coast.
+- **Masthead**: Features the top bar reading *THE WORLD IN ONE DAY* and *32 STORIES · 7 REGIONS · ONE PAGE*, a giant DejaVu Serif masthead for *Thursday 19 November 2026*, and a bold red date block (*NOV 19 / THU 2026*).
+- **Region Colour Chips**: Seven distinct region chips showing real story counts: Europe (8), Americas (5), Asia-Pacific (8), Middle East (4), Africa (3), Oceania (2), and World (2).
+- **By the Numbers Band**: Six large red figures highlighting key day metrics.
+- **12 Lead Stories**: Each story features a wide drawn illustration banner across the full card width complete with faces, motion details, and editorial badges (such as *FIRST TRILATERAL*, *OUT TODAY*, *9–6*, and *+17%*), accompanied by a region-coloured kicker, a large serif headline, a summary deck, and a source tag.
+- **Where It Happened Mini-Map**: A compact locator map featuring the 12 numbered story pins and a region-colour legend.
+- **Also On Thursday 19 November — 20 More Stories**: Presented in three clean columns covering additional breaking developments.
+- **Date Check Footer**: Enclosed in a red-outlined box listing stories deliberately excluded because they were first reported on Wednesday 18 November or earlier.
 
 ## How to Run
 
-To run the entry script and export `entry.png` to your designated output directory:
+To generate and verify the entry image:
 
 ```bash
 mkdir -p out && MAKEFUN_OUTPUT_DIR=out python3 main.py
 ```
+
+## How the Image is Built
+
+- `python3 compose.py` runs deterministic Python code using Pillow (PIL) to draw the complete 1024x1024 classic-newspaper vector front page from scratch, saving it as `entry.png`.
+- `python3 main.py` copies `entry.png` to the target output directory specified by `MAKEFUN_OUTPUT_DIR` (defaulting to `/output`), verifying byte integrity.
 
 ---
 
